@@ -10,18 +10,14 @@ function fibo(n){
   //Loop till the array count is equal to the n provided
 
   let seqArr = [0,1];
-  // while(n>seqArr.length){
-  //   let sum = seqArr[seqArr.length - 1] + seqArr[seqArr.length - 2];
-  //   seqArr.push(sum);
-  //   // console.log("sum",sum)
-  //   // console.log("seqArr",seqArr)
-  // }
   for(let i=2; i<n; i++){
     seqArr[i] = seqArr[i-1] + seqArr[i-2];
   }
-  console.log(seqArr)
+  return seqArr;
 }
 
-fibo(3);
-fibo(7);
-fibo(11);
+fibo(3);  //[0,1,1]
+fibo(7);  //[0,1,1,2,3,5,8]
+fibo(11); //[0, 1,  1,  2,  3,5, 8, 13, 21, 34,55]
+
+//BIG -> O(n)
